@@ -24,9 +24,9 @@ BASE_DIR = Path(__file__).resolve(strict=True).parent.parent
 SECRET_KEY = '2f$3(s@wl!*_du=i%uz%_a8i-t7afq1@05%u6=)k&huw9-_9$w'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['rakeshent.pythonanywhere.com']
 
 
 # Application definition
@@ -121,6 +121,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
 STATIC_URL = '/static/'
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 MEDIA_URL = '/aws-s3/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
